@@ -1,6 +1,6 @@
 Simple JSON Parser
 * main types:
-* * JsonTokenType
+ * JsonTokenType
 ** JsonToken
 ** JsonValueType
 ** JsonValue
