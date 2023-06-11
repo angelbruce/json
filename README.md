@@ -1,4 +1,8 @@
 Simple JSON Parser
+
+      JsonValue *json = parse_json("{}");
+      
+
 * main types:
 1. JsonTokenType
 1. JsonToken
