@@ -21,6 +21,10 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 **/
+
+#ifndef EASY_JSON_H
+#define EASY_JSON_H
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -126,3 +130,6 @@ JsonToken *parse_json_token(char *stream);
  * parse json token stream and return the parsed JsonValue result.
 */
 JsonValue *parse_json_value(JsonToken **cur);
+
+
+#endif //ABOUT EASY_JSON_H
