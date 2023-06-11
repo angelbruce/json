@@ -30,6 +30,9 @@ typedef struct _json_value_ JsonValue;
 typedef struct _json_value_obj_ JsonValueObj;
 typedef struct _json_value_array_ JsonValueArray;
 
+/**
+ * json token type for lexer parse
+*/
 typedef enum _json_lex_token_type_
 {
     LT_LBP,
@@ -45,6 +48,9 @@ typedef enum _json_lex_token_type_
     LT_NULL
 } JsonTokenType;
 
+/**
+ * json token parsed by lex parser
+*/
 typedef struct _json_lex_token_
 {
     JsonTokenType type;
@@ -55,6 +61,9 @@ typedef struct _json_lex_token_
     JsonToken *next;
 } JsonToken;
 
+/**
+ * json value type for syntax parse
+*/
 typedef enum _json_value_type_
 {
     YT_STRING,
@@ -65,6 +74,9 @@ typedef enum _json_value_type_
     YT_NULL
 } JsonValueType;
 
+/**
+ * json value parsed by syntax parser
+*/
 typedef struct _json_value_
 {
     JsonValueType type;
@@ -79,6 +91,9 @@ typedef struct _json_value_
 
 } JsonValue;
 
+/**
+ * json object {}
+*/
 typedef struct _json_value_obj_
 {
     char *name;
@@ -88,6 +103,9 @@ typedef struct _json_value_obj_
     JsonValueObj *next;
 } JsonValueObj;
 
+/**
+ * json array []
+*/
 typedef struct _json_value_array_
 {
     JsonValue *value;
@@ -96,6 +114,15 @@ typedef struct _json_value_array_
     JsonValueArray *next;
 } JsonValueArray;
 
+/**
+ * parse json stream and return the parsed JsonValue result.
+*/
 JsonValue *parse_json(char *stream);
+/**
+ * parse json stream and return the lexer token stream.
+*/
 JsonToken *parse_json_token(char *stream);
+/**
+ * parse json token stream and return the parsed JsonValue result.
+*/
 JsonValue *parse_json_value(JsonToken **cur);
