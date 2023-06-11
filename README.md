@@ -1,9 +1,9 @@
 Simple JSON Parser
 * main types:
- * JsonTokenType
-** JsonToken
-** JsonValueType
-** JsonValue
+1. JsonTokenType
+1. JsonToken
+1. JsonValueType
+1. JsonValue
 
 * JsonTokenType can be:
 ** LT_LBP
