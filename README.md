@@ -30,7 +30,7 @@ Simple JSON Parser
 1. YT_OBJECT
 1. YT_NULL
 
-*JsonValue canbe:
+* JsonValue canbe:
 1. string       char*
 1. number       number
 1. bool         ture/false (1/0)
